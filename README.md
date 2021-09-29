@@ -13,23 +13,24 @@
 Arduino library for providing a convenient C++ interface for accessing [UAVCAN](https://uavcan.org/) ([v1.0-beta](https://uavcan.org/specification/UAVCAN_Specification_v1.0-beta.pdf)) utilizing [libcanard](https://github.com/UAVCAN/libcanard).
 
 <p align="center">
-  <a href="https://github.com/107-systems/Viper-Firmware"><img src="https://github.com/107-systems/.github/raw/main/logo/viper.jpg" width="40%"></a>
+  <a href="https://github.com/107-systems/107-Arduino-DroneCore"><img src="https://github.com/107-systems/.github/raw/main/logo/viper.jpg" width="40%"></a>
 </p>
 
 This library works for
 * [ArduinoCore-samd](https://github.com/arduino/ArduinoCore-samd): [`Arduino Zero`](https://store.arduino.cc/arduino-zero), [`MKR 1000`](https://store.arduino.cc/arduino-mkr1000-wifi), [`MKR WiFi 1010`](https://store.arduino.cc/arduino-mkr-wifi-1010), [`Nano 33 IoT`](https://store.arduino.cc/arduino-nano-33-iot), [`MKR GSM 1400`](https://store.arduino.cc/arduino-mkr-gsm-1400-1415), [`MKR NB 1500`](https://store.arduino.cc/arduino-mkr-nb-1500-1413), [`MKR WAN 1300/1310`](https://store.arduino.cc/mkr-wan-1310) :heavy_check_mark:
-* [ArduinoCore-mbed](https://github.com/arduino/ArduinoCore-mbed): [`Portenta H7`](https://store.arduino.cc/portenta-h7), [`Nano 33 BLE`](https://store.arduino.cc/arduino-nano-33-ble) :heavy_check_mark:
+* [ArduinoCore-mbed](https://github.com/arduino/ArduinoCore-mbed): [`Portenta H7`](https://store.arduino.cc/portenta-h7), [`Nano 33 BLE`](https://store.arduino.cc/arduino-nano-33-ble), [`Nano RP2040 Connect`](https://store.arduino.cc/nano-rp2040-connect), [`Edge Control`](https://store.arduino.cc/edge-control) :heavy_check_mark:
 * [arduino-esp32](https://github.com/espressif/arduino-esp32): `ESP32 Dev Module`, `ESP32 Wrover Module`, ... :heavy_check_mark:
+* [arduino-pico](https://github.com/earlephilhower/arduino-pico): [`Raspberry Pi Pico`](https://www.raspberrypi.org/products/raspberry-pi-pico), `Adafruit Feather RP2040`, ... :heavy_check_mark:
 
 ### Reference-Implementation UAVCAN on Arduino
-* [UAVCAN-GNSS-Node](https://github.com/107-systems/UAVCAN-GNSS-Node): A UAVCAN node with a GNSS sensor providing location data.
-* [UAVCAN-ToF-Distance-Sensor-Node](https://github.com/107-systems/UAVCAN-ToF-Distance-Sensor-Node): Demo firmware for UAVCAN ToF Distance Sensor Node utilizing 107-Arduino-UAVCAN.
+* [UAVCAN-GNSS-Node](examples/UAVCAN-GNSS-Node): A UAVCAN node with a GNSS sensor providing location data.
+* [UAVCAN-ToF-Distance-Sensor-Node](examples/UAVCAN-ToF-Distance-Sensor-Node): Demo firmware for UAVCAN ToF Distance Sensor Node utilizing 107-Arduino-UAVCAN.
 
 ### Example
-**Note**: Please be advised that the [examples](https://github.com/107-systems/107-Arduino-UAVCAN/tree/master/examples) shipped with this library are to be considered minimal examples to get you started working with [UAVCAN](https://uavcan.org/).
+**Note**: Please be advised that the [examples](examples) shipped with this library are to be considered minimal examples to get you started working with [UAVCAN](https://uavcan.org/).
 They are known to violate section **2.1.2.2 Regulation** of the UAVCAN Specification due to their reliance on hard-coded port identifiers.
 A compliant implementation would instead provide configurable port-IDs and support the Register Interface (section **5.3 Application-layer functions**).
-Fully compliant examples that implement reconfigurable port-IDs are shipped separately; e.g., [UAVCAN-GNSS-Node](https://github.com/107-systems/UAVCAN-GNSS-Node).
+Fully compliant examples that implement reconfigurable port-IDs are shipped separately; e.g., [UAVCAN-GNSS-Node](examples/UAVCAN-GNSS-Node).
 ```C++
 #include <ArduinoUAVCAN.h>
 /* ... */
